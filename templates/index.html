@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spam Classifier</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(90deg,skyblue, blue, violet);
+         }
+        .container {
+            max-width: 600px; 
+            margin: 50px auto; 
+            padding: 20px; 
+            background-color: #fff; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+        input[type="text"], button {
+             width: 90%; 
+             padding: 10px; 
+             margin: 10px 0; 
+            }
+        button { 
+            background-color: #008cba; 
+            color: white; border: none; 
+            cursor: pointer; 
+        }
+        button:hover {
+            background-color: #005f73; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Spam Classifier</h2>
+        <form method="post">
+            <input type="text" name="text" placeholder="Enter text here..." required>
+            <button type="submit">Classify Text</button>
+        </form>
+        {% if message %}
+            <p>Classification: {{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
